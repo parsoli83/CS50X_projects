@@ -1,15 +1,27 @@
+// program named mainreturn.c
 #include <stdio.h>
-#include <cs50.h>
 #include <string.h>
-#include <ctype.h>
-
-int main(int argc, char argv[])
+#include <stdlib.h>
+// defining main with arguments
+int main(int argc, char* argv[])
 {
-    //printf("%i\n",strcmp((char) argv[1],'2'));
-
-    char c= '9';
-    if (!(c==53 || c==54 || c==55 || c==56 ))
+    char* guess = get_string("Input a 5-letter word: ");
+    if (atoi(argv[1]) == 5 || atoi(argv[1]) == 6 || atoi(argv[1]) == 7 || atoi(argv[1]) == 8)
     {
-        printf("yessssssss\n");
+        printf("good program\n");
     }
+    /*
+    if (argc != 2){
+        printf("Usage: ./wordle wordsize\n");
+        return 1;
+    }
+    char *thingy = "5";
+    printf("%d\n",strlen(thingy));
+    printf("%d\n",strlen(argv[1]));
+    if (strcmp(argv[1][0],thingy[0]) || atoi(argv[1]) == 6 || argv[1] == '7' || argv[1] == '8')
+    {
+        printf("Wordsize");
+    }
+    */
+    
 }
