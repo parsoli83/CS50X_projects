@@ -279,15 +279,7 @@ int main()
 
 }
 
-int pyramid(int h)
+int merge_sort(int array[], int length)
 {
-    if ( h != 0)
-    {
-        pyramid(h-1);
-        for (int i=0;i<h;i++)
-        {
-            printf("#");
-        }
-        printf("\n");
-    }
+    
 }
