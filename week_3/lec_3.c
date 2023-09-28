@@ -250,7 +250,7 @@ int pyramid(int h)
 *** merge sort ***
 
 
-
+really cool thing
 
 
 
@@ -258,28 +258,3 @@ int pyramid(int h)
 
 
 */
-
-
-
-
-
-
-
-
-
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <cs50.h>
-
-int main()
-{
-    pyramid(50);
-
-}
-
-int merge_sort(int array[], int length)
-{
-    
-}

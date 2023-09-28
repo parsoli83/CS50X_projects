@@ -1,0 +1,59 @@
+$ time ./sort1 sorted50000.txt
+
+real	0m0.131s
+user	0m0.044s
+sys	0m0.074s
+
+$ time ./sort1 reversed50000.txt
+
+real	0m4.665s
+user	0m4.587s
+sys	0m0.060s
+
+$ time ./sort1 random50000.txt
+
+real	0m6.376s
+user	0m6.283s
+sys	0m0.072s
+
+#######################################
+sort2 merger sort
+$ time ./sort2 sorted50000.txt
+
+real	0m0.132s
+user	0m0.044s
+sys	0m0.080s
+
+$ time ./sort2 reversed50000.txt
+
+real	0m0.130s
+user	0m0.047s
+sys	0m0.074s
+
+
+$ time ./sort2 random50000.txt
+
+real	0m0.153s
+user	0m0.064s
+sys	0m0.076s
+
+#########################################
+
+$ time ./sort3 sorted50000.txt
+
+real	0m2.384s
+user	0m2.311s
+sys	0m0.060s
+
+$ time ./sort3 reversed50000.txt
+
+real	0m2.461s
+user	0m2.379s
+sys	0m0.072s
+
+$ time ./sort3 random50000.txt
+
+real	0m2.551s
+user	0m2.460s
+sys	0m0.084s
+
