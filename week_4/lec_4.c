@@ -1,5 +1,7 @@
 /*
 
+//I tried to keep it short
+
 *** hexadecimal  ***
 
 0123456789ABCDEF
