@@ -116,6 +116,11 @@ sqlite> SELECT COUNT(*) FROM Large WHERE AGATC > 25;
 sqlite> SELECT COUNT(*) FROM Large;
 23
 
+sqlite> INSERT INTO large(TCTG) VALUES ('persian');
+# insert new values
+ 
+
+
 
 *** sqlite functions ***
 
@@ -132,17 +137,29 @@ LIKE
 ORDER BY
 LIMIT
 GROUP BY
+...
+JOIN 
 
 
+*** python and sql ***
+from cs50 import SQL
+db = SQL("sqlite:///large.db")
+limit = 35
+rows = db.execute(f"SELECT COUNT(name) AS n FROM large WHERE AGATC > {limit}")
+print(rows[0]["n"])
+
+
+for this:
+f"SELECT COUNT(name) AS n FROM large WHERE AGATC > {limit}"
+
+you can do this too:
+("SELECT COUNT(name) AS n FROM large WHERE AGATC > ?",limit)
+
+>>> 11
 
 """
-import sql
-l = [0,1,2,3,4,5,6,7,8,9]
-def distance_from_2(num):
-    output = num-4
-    if output<0:
-        return output*-1
-    return output
-
-for i in sorted(l , key=distance_from_2):
-    print(i)
+from cs50 import SQL
+db = SQL("sqlite:///large.db")
+limit = 35
+rows = db.execute(f"SELECT COUNT(name) AS n FROM large WHERE AGATC > {limit}")
+print(rows[0]["n"])

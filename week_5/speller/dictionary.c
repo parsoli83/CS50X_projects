@@ -112,7 +112,7 @@ bool load(const char *dictionary)
             case 5:
                 test_int = 5;
             
-
+        test_int++;
         }
         if (table[h] == NULL)
         {
