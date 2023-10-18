@@ -158,8 +158,3 @@ you can do this too:
 >>> 11
 
 """
-from cs50 import SQL
-db = SQL("sqlite:///large.db")
-limit = 35
-rows = db.execute(f"SELECT COUNT(name) AS n FROM large WHERE AGATC > {limit}")
-print(rows[0]["n"])
