@@ -1,3 +1,3 @@
 """
-watched till min 1:40
+watched till min 2:20
 """
