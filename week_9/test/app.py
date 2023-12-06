@@ -46,7 +46,7 @@ def greet():
 
 """
 
-
+from cs50 import SQL
 from flask import Flask,render_template,request
 
 app = Flask(__name__)
@@ -56,9 +56,8 @@ def index_page():
     return render_template("index.html")
 
 
-@app.route("/register")
+@app.route("/register",methods=["POST"])
 def greet():
-    name = request.args.get("name")
-    sport = request.args.get("sport")
-    return render_template("greet.html")
+    name = request.form.get("name")
+    return render_template("greet.html",name=name)
     
