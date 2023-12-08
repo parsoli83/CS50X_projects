@@ -5,5 +5,40 @@
 {% endblock %}
 
 {% block main %}
-    
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+                {% for i in range(properties| length) %}
+                    <tr>
+                        <td>{{ owned_shares[i]}}</td>
+                        <td>{{ properties[i][0]}}</td>
+                        <td>{{ properties[i][1]}}</td>
+                        <td>{{ properties[i][-1]}}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td>{{share_price}}</td>
+                    <td>{{0}}</td>
+                    <td>{{0}}</td>
+                    <td>{{sum}}</td>
+                </tr>
+                <tr>
+                    <td>{{cash_price}}</td>
+                    <td>{{0}}</td>
+                    <td>{{0}}</td>
+                    <td>{{cash}}</td>
+                </tr>
+            
+            <!-- TODO: Loop through the database entries to display them in this table -->
+        </tbody>
+    </table>
 {% endblock %}
