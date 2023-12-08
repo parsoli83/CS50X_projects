@@ -37,13 +37,6 @@ def index_page():
 @app.route("/greet")
 def greet():
     return render_template("greet.html",name=request.args.get("name"))
-    
-
-
-
-
-
-
 """
 
 from cs50 import SQL
