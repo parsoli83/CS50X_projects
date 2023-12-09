@@ -1,0 +1,133 @@
+
+* > * {
+    font-family: "Poppins", cursive;
+}
+
+
+body {
+    --back-light: rgba(28, 35, 51);
+    --back-color: rgba(30, 21, 37);
+    --blue-text: rgba(120, 120, 246, 1);
+    --cyan-text: rgba(0, 255, 255);
+
+    background-color: var(--back-color);
+}
+
+
+
+p {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.text-center {
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto, 1000px));
+    row-gap: 2em;
+    column-gap: 3em;
+    margin: 3em 0;
+
+}
+
+.grid .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0;
+}
+
+.grid .icon > span {
+    font-size: 4em;
+    color: var(--cyan-text);
+}
+
+.primary-dark {
+    color: var(--blue-text);
+    text-align: right;
+}
+
+.secondary-dark {
+    color: var(--cyan-text);
+    padding: 20px 30px;
+}
+
+.bg-light {
+    background-color: var(--back-light);
+    box-shadow: 1px 5px 20px rgba(55, 65, 81, 0.1);
+    border-radius: 20px;
+}
+
+button {
+    border-radius: 50px
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(150, 150, 150);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(131, 131, 131);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(104, 104, 104);
+}
+
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+
+
+
+#features {
+    padding: 20px 20px;
+    margin: 20px 20px;
+}
+
+
+#gui-features,
+#gui-li {
+    text-align: right;
+}
+
+.feature {
+
+    align-items: right;
+    padding: 20px 20px;
+    background-color: #0e1525;
+    color: rgba(243, 244, 246);
+    border-radius: 20px;
+    vertical-align: middle;
+    list-style: none;
+
+    /* put the header on top, then a line, then the text */
+    flex-flow: column;
+    margin: 20px;
+}

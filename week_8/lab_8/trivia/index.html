@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <title>Statistics</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let correct = document.querySelector(".correct");
+            correct.addEventListener("click", function () {
+                correct.style.backgroundColor = "green";
+                document.querySelector("#feedback1").innerHTML = "Correct!";
+            });
+
+            let incorrects = document.querySelectorAll(".incorrect");
+            for (let i = 0; i < incorrects.length; i++) {
+                incorrects[i].addEventListener("click", function () {
+                    incorrects[i].style.backgroundColor = "red";
+                    document.querySelector("#feedback1").innerHTML = "Incorrect";
+                });
+            }
+
+            document.querySelector("#check").addEventListener("click", function () {
+                let input = document.querySelector("input");
+                if (input.value.includes("s")) {
+                    input.style.backgroundColor = "green";
+                    document.querySelector("#feedback2").innerHTML = "Correct!";
+                } else {
+                    input.style.backgroundColor = "red";
+                    document.querySelector("#feedback2").innerHTML = "Incorrect";
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header m-1" style="font-weight: bold">
+        <h1><b>Chemistry!</b></h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="section">
+            <h2>Multiple Choice </h2>
+            <hr>
+            <h3>What letter does statistics start with?</h3>
+            <p>
+                <button class="incorrect btn btn-primary" style="border-radius: 7px; background-color: #f200ff"
+                    type="submit">i</button>
+                <button class="incorrect btn btn-primary" style="border-radius: 7px; background-color: #f200ff"
+                    type="submit">a</button>
+                <button class="incorrect btn btn-primary" style="border-radius: 7px; background-color: #f200ff"
+                    type="submit">t</button>
+                <button class="correct btn btn-primary" style="border-radius: 7px; background-color: #f200ff"
+                    type="submit">s</button>
+            </p>
+
+            <p id="feedback1"></p>
+        </div>
+
+        <div class="section">
+            <h2>Type Response</h2>
+            <hr>
+            <h3>What is the first letter of the word statistics?</h3>
+            <input type="text" style="border-radius: 7px"></input>
+            <button id="check" style="border-radius: 7px; background-color: #12f0ff" class="btn btn-primary"
+                check">Check Answer</button>
+
+            <p id="feedback2"></p>
+        </div>
+    </div>
+    
+
+
+
+
+
+</body>
+
+</html>
